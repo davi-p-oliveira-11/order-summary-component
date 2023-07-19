@@ -1,0 +1,106 @@
+@import './variables';
+@import './mixins';
+
+.card {
+  background-color: $very-pale-blue;
+  width: 25rem;
+  height: 37.5rem;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+
+  .illustration-hero {
+    width: 100%;
+    object-fit: fill;
+  }
+
+  .card-body {
+    padding: 0.625rem 1.25rem;
+
+    .card-title {
+      margin-top: 1rem;
+      color: $dark-blue;
+      font-weight: $fw-900;
+      line-height: 1.8;
+    }
+
+    .card-description {
+      margin-top: 1rem;
+      color: $desaturated-blue;
+      line-height: 1.4;
+    }
+  }
+
+  .plan {
+    margin-top: 1rem;
+    height: 5rem;
+    background-color: $pale-blue;
+    @include flexSpace;
+    padding: 0.875rem;
+    border-radius: 0.75rem;
+    
+
+   .column {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5.625rem;
+
+     h4 {
+      color: $dark-blue;
+      font-weight: $fw-900;
+      line-height: 1.4;
+     }
+
+     p {
+      color: $desaturated-blue;
+      font-weight: $fw-500;
+      }
+
+    }
+
+    a {
+      font-weight: $fw-700;
+      font-size: 0.875rem;
+      text-decoration: underline;
+      color: $bright-blue;
+      transition: color 0.15s;
+
+      &:hover {
+       color: $bright-blue-hover;
+      }
+    }
+  }
+
+  button {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border-radius: 0.75rem;
+    padding: 0.875rem 6rem;
+    border: none;
+    background-color: $bright-blue;
+    color: $very-pale-blue;
+    font-weight: $fw-700;
+    font-size: 0.8125rem;
+    transition: background-color 0.15s;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: $bright-blue-hover;
+    }
+
+  }
+  
+  .cancel-link {
+    font-weight: $fw-700;
+    color: $desaturated-blue;
+    font-size: 0.8125rem;
+    transition: color 0.15s;
+
+    &:hover {
+      color: $dark-blue;
+    }
+  }
+
+  
+}
